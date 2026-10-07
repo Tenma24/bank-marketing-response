@@ -4,7 +4,7 @@
 
 **Team:** Nurlan Ramazan · Araizhan Tazhimova
 
-[Notebook](notebooks/bank_marketing.ipynb) · [Python source](src/bank_marketing.py) · [Presentation](presentation/bank_marketing_midterm.pptx)
+[Notebook](notebooks/bank_marketing.ipynb) · [Python source](src/bank_marketing.py) · [Presentation](presentation/bank_marketing_midterm_redesigned.pptx)
 
 ## 1. Introduction
 

@@ -1,6 +1,6 @@
 # Подготовка к выступлению — Bank Marketing Response
 
-Готовая презентация: [bank_marketing_midterm.pptx](bank_marketing_midterm.pptx).
+Готовая презентация: [bank_marketing_midterm_redesigned.pptx](bank_marketing_midterm_redesigned.pptx).
 Она содержит **10 слайдов на английском**: Introduction, данные и пять EDA-графиков,
 подготовка данных, оценивание, baseline и три алгоритма, результаты, ошибки,
 Conclusion и план final. Требование задания — 7–12 слайдов и 10 минут.

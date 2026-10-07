@@ -42,7 +42,7 @@ def build():
 
 **Team:** Nurlan Ramazan · Araizhan Tazhimova
 
-[Notebook](notebooks/bank_marketing.ipynb) · [Python source](src/bank_marketing.py) · [Presentation](presentation/bank_marketing_midterm.pptx)
+[Notebook](notebooks/bank_marketing.ipynb) · [Python source](src/bank_marketing.py) · [Presentation](presentation/bank_marketing_midterm_redesigned.pptx)
 
 ## 1. Introduction
 
@@ -327,7 +327,7 @@ executing the notebook again.
 <h2>Training cross-validation</h2><div class="table">{cv_table.to_html(index=False,escape=True,border=0)}</div><p>Selected hyperparameter CV scores have tuning optimism. Fold SD is not a confidence interval. Validation selects the final candidate; no test scoring was performed.</p>
 <h2>Evidence and interpretation</h2>{figure_html}
 <h2>Reproduce and continue</h2><p>See <a href="../README.md">README</a>, <a href="notebook_report.html">full executed notebook report</a>, <a href="../docs/START_HERE_RU.md">Russian instructions</a> and <a href="../docs/RUBRIC_CHECKLIST.md">rubric mapping</a>. Next: temporal checks, feature-availability audit, nonlinear SVM, cost-aware thresholding and a frozen final-test evaluation.</p>
-<footer>Source: <a href="https://archive.ics.uci.edu/dataset/222/bank+marketing">UCI Bank Marketing</a>, Moro, Rita &amp; Cortez (2014), CC BY 4.0. Code and draft explanations prepared with AI assistance; team review and oral defense required. The <a href="../presentation/bank_marketing_midterm.pptx">10-slide presentation</a> and <a href="../presentation/SPEAKER_NOTES_EN.md">speaker notes</a> are available separately.</footer>
+<footer>Source: <a href="https://archive.ics.uci.edu/dataset/222/bank+marketing">UCI Bank Marketing</a>, Moro, Rita &amp; Cortez (2014), CC BY 4.0. Code and draft explanations prepared with AI assistance; team review and oral defense required. The <a href="../presentation/bank_marketing_midterm_redesigned.pptx">10-slide presentation</a> and <a href="../presentation/SPEAKER_NOTES_EN.md">speaker notes</a> are available separately.</footer>
 </main></body></html>'''
     (result / "project_overview.html").write_text(body, encoding="utf-8")
     print("README and compact HTML report generated from saved results.")

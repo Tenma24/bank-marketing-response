@@ -16,7 +16,7 @@
 - README, соответствие критериям, план final, таблица команды.
 - HTML-отчёты и отдельные графики, которые можно открыть без запуска Python.
 
-**Презентация готова:** [10 слайдов на английском](../presentation/bank_marketing_midterm.pptx),
+**Презентация готова:** [10 слайдов на английском](../presentation/bank_marketing_midterm_redesigned.pptx),
 с Introduction, Conclusion и заметками докладчиков.
 [Текст выступления](../presentation/SPEAKER_NOTES_EN.md) и
 [план репетиции](../presentation/SPEAKER_GUIDE_RU.md) рассчитаны на 10 минут.
@@ -216,7 +216,7 @@ git push
 В PDF указаны: notebook (`.ipynb`) или скрипт (`.py`), README (`.md` или `.pdf`)
 и презентация (`.pptx` или `.pdf`). В нашем проекте включены и notebook, и скрипт.
 Добавьте данные/инструкцию получения и `requirements.txt`, чтобы работу можно
-было воспроизвести. Готовая презентация находится в `presentation/bank_marketing_midterm.pptx`.
+было воспроизвести. Готовая презентация находится в `presentation/bank_marketing_midterm_redesigned.pptx`.
 
 В PDF нет платформы сдачи и дедлайна. Уточните эти два пункта у преподавателя.
 Если принимается ссылка — убедитесь, что преподаватель может открыть

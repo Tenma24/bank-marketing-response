@@ -27,7 +27,7 @@ brief to the prepared artifacts. Points are the instructor's rubric weights,
 - [x] Cross-validation for at least one model (all three lecture models).
 - [x] Open problems and final-stage plan.
 - [ ] Actual student contribution entries, verified by the students.
-- [x] Presentation: [10-slide PPTX](../presentation/bank_marketing_midterm.pptx), with Introduction, Conclusion and a 10-minute speaking plan.
+- [x] Presentation: [10-slide PPTX](../presentation/bank_marketing_midterm_redesigned.pptx), with Introduction, Conclusion and a 10-minute speaking plan.
 - [ ] Oral defense with both team members.
 
 The brief does not name a submission platform or deadline. GitHub is a project
