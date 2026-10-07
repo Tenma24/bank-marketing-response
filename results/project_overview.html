@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bank Marketing Response — Midterm Overview</title>
+<style>body{margin:0;background:#f3f5f8;color:#172738;font:16px/1.6 system-ui,Arial,sans-serif}main{max-width:1080px;margin:0 auto;padding:48px 24px}header{border-top:7px solid #147d92;padding:24px 0}h1{font-size:42px;line-height:1.15;margin:8px 0 16px}h2{margin-top:36px;font-size:25px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:#147d92;font-size:13px;font-weight:700}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.card,figure,.panel{background:white;border:1px solid #dce3e9;border-radius:10px;padding:20px}.card b{font-size:30px;display:block;color:#147d92}.note{padding:16px 20px;background:#e8f1f3;border-left:4px solid #147d92}.table{overflow-x:auto}table{width:100%;border-collapse:collapse;background:white;font-size:14px}th,td{padding:12px;text-align:left;border-bottom:1px solid #dce3e9}th{background:#e5edf2}figure{margin:22px 0}img{max-width:100%;height:auto;display:block;margin:auto}figcaption{margin-top:18px;color:#405367}a{color:#086c80}footer{font-size:13px;color:#536577;border-top:1px solid #ccd7df;margin-top:36px;padding-top:20px}@media(max-width:680px){.cards{grid-template-columns:1fr}h1{font-size:32px}main{padding:24px 14px}}@media print{body{background:white}main{padding:0}figure,.card{break-inside:avoid}}</style></head><body><main>
+<header><div class="eyebrow">Machine Learning Algorithms · Midterm</div><h1>Bank Marketing Response</h1><p>Nurlan Ramazan · Araizhan Tazhimova</p><p>Predicting term-deposit subscriptions using attributes available before a scheduled call.</p></header>
+<div class="note"><strong>Scope:</strong> historical grouped random validation. The test set remains reserved. The 10-slide presentation is ready. Rehearsal, oral defense and actual student contribution records remain.</div>
+<section class="cards"><div class="card"><b>41,188</b>source observations</div><div class="card"><b>0.450</b>selected validation F1</div><div class="card"><b>62.2%</b>actual positives detected</div></section>
+<h2>What was done</h2><p>Five interpreted EDA plots; documented quality checks; duration excluded; domain transformations, one-hot encoding and scaling in fold-local pipelines; majority baseline plus Decision Tree, KNN and Linear SVM; five-fold grouped CV; limited hyperparameter tuning; validation errors and a final-stage plan.</p>
+<p>Partition sizes: train 24,713, validation 8,238, reserved test 8,237. Identical predictor profiles stay together. Client-level independence cannot be verified without client IDs. This random split does not model future campaign performance.</p>
+<h2>Measured validation results</h2><div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Accuracy</th>
+      <th>Precision (yes)</th>
+      <th>Recall (yes)</th>
+      <th>F1 (yes)</th>
+      <th>ROC-AUC</th>
+      <th>AP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Decision Tree</td>
+      <td>0.8288</td>
+      <td>0.3527</td>
+      <td>0.6218</td>
+      <td>0.4501</td>
+      <td>0.7837</td>
+      <td>0.4337</td>
+    </tr>
+    <tr>
+      <td>Linear SVM</td>
+      <td>0.8252</td>
+      <td>0.3478</td>
+      <td>0.6304</td>
+      <td>0.4483</td>
+      <td>0.7908</td>
+      <td>0.4487</td>
+    </tr>
+    <tr>
+      <td>KNN</td>
+      <td>0.8963</td>
+      <td>0.5853</td>
+      <td>0.2737</td>
+      <td>0.3730</td>
+      <td>0.7695</td>
+      <td>0.4140</td>
+    </tr>
+    <tr>
+      <td>Dummy (majority)</td>
+      <td>0.8874</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.5000</td>
+      <td>0.1126</td>
+    </tr>
+  </tbody>
+</table></div><p>The tree leads by about 0.002 F1 over Linear SVM; no meaningful superiority is established. SVM has higher ROC-AUC and AP. The majority baseline has 88.7% accuracy but finds no positives.</p>
+<h2>Training cross-validation</h2><div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Mean CV F1</th>
+      <th>Fold SD</th>
+      <th>Candidates</th>
+      <th>Folds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Decision Tree</td>
+      <td>0.4456</td>
+      <td>0.0227</td>
+      <td>12</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>KNN</td>
+      <td>0.3537</td>
+      <td>0.0100</td>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Linear SVM</td>
+      <td>0.4479</td>
+      <td>0.0167</td>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table></div><p>Selected hyperparameter CV scores have tuning optimism. Fold SD is not a confidence interval. Validation selects the final candidate; no test scoring was performed.</p>
+<h2>Evidence and interpretation</h2><figure><img src="figures/01_target_distribution.png" alt="Training class balance"><figcaption><strong>Training class balance.</strong> Only 11.3% of training observations are positive. The majority baseline therefore looks strong on accuracy but has zero positive recall.</figcaption></figure>
+<figure><img src="figures/02_age_distribution.png" alt="Age distribution"><figcaption><strong>Age distribution.</strong> Class-normalized histograms reveal substantial overlap. Age alone cannot cleanly separate outcomes.</figcaption></figure>
+<figure><img src="figures/03_job_response.png" alt="Occupation response"><figcaption><strong>Occupation response.</strong> Response differs across occupation groups. Group sizes and campaign-selection effects limit causal interpretation.</figcaption></figure>
+<figure><img src="figures/04_previous_campaign.png" alt="Previous campaign outcome"><figcaption><strong>Previous campaign outcome.</strong> Previous success is associated with a higher response rate. It describes a prior campaign, not the current target.</figcaption></figure>
+<figure><img src="figures/05_campaign_contacts.png" alt="Contact frequency"><figcaption><strong>Contact frequency.</strong> Higher contact counts are associated with lower response here. Repeated attempts may follow non-response; extra calls are not proven harmful.</figcaption></figure>
+<figure><img src="figures/06_model_comparison.png" alt="Model comparison and CV"><figcaption><strong>Model comparison and CV.</strong> Tree and Linear SVM are close on F1. Error bars show fold SD, not uncertainty intervals for future performance.</figcaption></figure>
+<figure><img src="figures/07_roc_precision_recall.png" alt="Ranking performance"><figcaption><strong>Ranking performance.</strong> ROC and precision–recall curves use continuous scores. AP means average precision, not trapezoidal PR-AUC.</figcaption></figure>
+<figure><img src="figures/08_confusion_matrix.png" alt="Selected model errors"><figcaption><strong>Selected model errors.</strong> The tree finds 577 positive cases, misses 351, and makes 1059 false-positive predictions.</figcaption></figure>
+<figure><img src="figures/09_tree_importance.png" alt="Tree explanation"><figcaption><strong>Tree explanation.</strong> Impurity importance describes the fitted tree. Correlation and split-selection bias limit interpretation; this is not causal importance.</figcaption></figure>
+<h2>Reproduce and continue</h2><p>See <a href="../README.md">README</a>, <a href="notebook_report.html">full executed notebook report</a>, <a href="../docs/START_HERE_RU.md">Russian instructions</a> and <a href="../docs/RUBRIC_CHECKLIST.md">rubric mapping</a>. Next: temporal checks, feature-availability audit, nonlinear SVM, cost-aware thresholding and a frozen final-test evaluation.</p>
+<footer>Source: <a href="https://archive.ics.uci.edu/dataset/222/bank+marketing">UCI Bank Marketing</a>, Moro, Rita &amp; Cortez (2014), CC BY 4.0. Code and draft explanations prepared with AI assistance; team review and oral defense required. The <a href="../presentation/bank_marketing_midterm.pptx">10-slide presentation</a> and <a href="../presentation/SPEAKER_NOTES_EN.md">speaker notes</a> are available separately.</footer>
+</main></body></html>

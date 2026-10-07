@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "source_checksum": true,
+  "complete_disjoint_split": true,
+  "group_disjoint_cv": true,
+  "test_not_scored": true,
+  "saved_metrics_independently_recomputed": true,
+  "notebook_matches_python_code": true,
+  "notebook_executed_without_errors": true,
+  "code_cells": 20
+}

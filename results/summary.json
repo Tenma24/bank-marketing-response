@@ -1,0 +1,41 @@
+{
+  "source_rows": 41188,
+  "source_columns": 21,
+  "raw_exact_repeated_rows": 12,
+  "repeated_predictor_rows_without_duration": 2021,
+  "split_records": {
+    "train": 24713,
+    "validation": 8238,
+    "test": 8237
+  },
+  "train_prevalence": 0.11265325941812002,
+  "validation_prevalence": 0.11264870114105366,
+  "best_model": "Decision Tree",
+  "validation": {
+    "accuracy": 0.8288419519300801,
+    "precision_yes": 0.3526894865525672,
+    "recall_yes": 0.6217672413793104,
+    "f1_yes": 0.4500780031201248,
+    "roc_auc": 0.7837006609981604,
+    "average_precision": 0.4336660836102519
+  },
+  "selected_model_cv_f1_mean": 0.4456288685656449,
+  "selected_model_cv_f1_std": 0.02274211868466759,
+  "confusion_matrix_validation": {
+    "tn": 6251,
+    "fp": 1059,
+    "fn": 351,
+    "tp": 577
+  },
+  "source_sha256": "74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8",
+  "random_state": 42,
+  "test_evaluated": false,
+  "presentation_created": true,
+  "evaluation_design": "approximately stratified predictor-profile-grouped random 60/20/20 split; 5-fold grouped CV on train",
+  "versions": {
+    "python": "3.12.0",
+    "numpy": "2.4.0",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.1"
+  }
+}

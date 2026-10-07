@@ -1,0 +1,22 @@
+feature,dtype,description
+age,int64,Age in years; available before call
+job,str,Occupation category; available before call
+marital,str,Marital-status category; available before call
+education,str,Education category; available before call
+default,str,Credit-in-default status; includes unknown
+housing,str,Housing-loan status; includes unknown
+loan,str,Personal-loan status; includes unknown
+contact,str,Recorded communication channel; assumed scheduled before call
+month,str,Call month; assumed known for the scheduled call
+day_of_week,str,Call weekday; assumed known for the scheduled call
+duration,int64,Realized call length in seconds; EXCLUDED as unavailable before call
+campaign,int64,Campaign contact count including recorded call; use count minus one
+pdays,int64,Days since previous-campaign contact; 999 = no previous contact
+previous,int64,Number of contacts before this campaign
+poutcome,str,Previous campaign outcome
+emp.var.rate,float64,Quarterly employment variation; assumed available as recorded
+cons.price.idx,float64,Monthly consumer-price index; assumed available as recorded
+cons.conf.idx,float64,Monthly consumer-confidence index; assumed available as recorded
+euribor3m,float64,Daily 3-month Euribor rate; assumed available as recorded
+nr.employed,float64,Quarterly employment indicator; assumed available as recorded
+y,str,"Term deposit subscribed: yes/no; TARGET, never an input"

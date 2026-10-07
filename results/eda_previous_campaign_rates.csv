@@ -1,0 +1,4 @@
+poutcome,records,subscriptions,response_rate
+nonexistent,21287,1885,0.08855169821957062
+failure,2594,358,0.13801079414032383
+success,832,541,0.6502403846153846

@@ -1,0 +1,15 @@
+{
+  "Decision Tree": {
+    "model__class_weight": "balanced",
+    "model__max_depth": 10,
+    "model__min_samples_leaf": 20
+  },
+  "KNN": {
+    "model__n_neighbors": 15,
+    "model__weights": "distance"
+  },
+  "Linear SVM": {
+    "model__C": 1.0,
+    "model__class_weight": "balanced"
+  }
+}
